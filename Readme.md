@@ -3,7 +3,7 @@
 ## Features
 
 - Deploy snmpb browser in a dockerized GUI.
-- Running on Debian Buster Slim i386 with it's dependencies (dpkg -I <package_name>.deb to see them).
+- Running on Debian Buster Slim i386 with its dependencies (dpkg -I <package_name>.deb to see them).
 
 - [Dogma](https://github.com/williamblair333/dogma) may be useful for running GUIs living in Docker containers.
 
