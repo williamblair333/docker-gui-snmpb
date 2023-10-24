@@ -2,10 +2,10 @@
 
 ## Features
 
-- Streamlined deployment of SNMP browser with a GUI inside a Docker container.
+- Deploy snmpb browser in a dockerized GUI.
 - Running on Debian Buster Slim i386 with it's dependencies (dpkg -I <package_name>.deb to see them).
 
-- Use this with [Dogma](https://github.com/williamblair333/dogma) for convenience
+- [Dogma](https://github.com/williamblair333/dogma) may be useful for running GUIs living in Docker containers.
 
 ## Prerequisites
 
@@ -15,20 +15,23 @@
 
 ## Directory Structure
 
-docker-gui-gpt4all/  
+snmpb/  
 ├── Dockerfile: Defines the Docker container including the necessary dependencies.  
 ├── docker-compose.yml: Docker Compose configuration file.  
 ├── snmpb_0.8_i386.deb:  The snmpb package.  
 └── logs/: It's supposed to store logs here.  
-└── root/: Allows for storing all changes to the running app and will persist on container destruction  
+└── root/: Allows for storing all changes in order to persist upon container destruction and construction  
 └── tmp/: It might be useful to keep.  
 
 ## Getting Started
 
 1. **Clone the repository**:
     ```bash
-    git clone https://github.com/yourusername/docker-gui-snmpb.git
+    git clone https://github.com/williamblair333/docker-gui-snmpb.git
     cd docker-gui-snmpbrowser
+    sudo xhost +
+    docker exec -it <container_name> snmpb
+    sudo xhost -
     ```
 
 2. **Build and start the Docker container**:
