@@ -38,9 +38,9 @@ snmpb/
 
 3.. **Run snmpb**:
     ```bash
-    sudo xhost +
-    docker exec -it <container_name> snmpb
-    sudo xhost -
+    sudo xhost +  
+    docker exec -it <container_name> snmpb  
+    sudo xhost -  
     ```
 
 ## TODO
