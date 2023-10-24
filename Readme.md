@@ -36,7 +36,7 @@ snmpb/
     docker-compose up --build
     ```
 
-3.. **Run snmpb**:
+3. **Run snmpb**:
     ```bash
     sudo xhost +  
     docker exec -it <container_name> snmpb  
