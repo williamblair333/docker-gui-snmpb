@@ -29,9 +29,6 @@ snmpb/
     ```bash
     git clone https://github.com/williamblair333/docker-gui-snmpb.git
     cd docker-gui-snmpbrowser
-    sudo xhost +
-    docker exec -it <container_name> snmpb
-    sudo xhost -
     ```
 
 2. **Build and start the Docker container**:
@@ -39,13 +36,12 @@ snmpb/
     docker-compose up --build
     ```
 
-## Notes, Security
-
-- Make sure to handle X11 permissions carefully when granting and revoking access.
-
-## Notes, General
-
-- For better performance, configure your GPU settings appropriately.
+3.. **Run snmpb**:
+    ```bash
+    sudo xhost +
+    docker exec -it <container_name> snmpb
+    sudo xhost -
+    ```
 
 ## TODO
 
