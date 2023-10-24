@@ -3,7 +3,7 @@
 ## Features
 
 - Streamlined deployment of SNMP browser with a GUI inside a Docker container.
-- Designed to work with Debian-based images satisfying specific dependencies.
+- Running on Debian Buster Slim i386 with it's dependencies (dpkg -I <package_name>.deb to see them).
 
 - Use this with [Dogma](https://github.com/williamblair333/dogma) for convenience
 
@@ -18,9 +18,10 @@
 docker-gui-gpt4all/  
 ├── Dockerfile: Defines the Docker container including the necessary dependencies.  
 ├── docker-compose.yml: Docker Compose configuration file.  
-├── gpt4all-installer-linux.run: GPT-4 All installer for Linux.  
-└── docs/: LocalDocs for training go here  
-└── models/: Model files , set this in the GUI  
+├── snmpb_0.8_i386.deb:  The snmpb package.  
+└── logs/: It's supposed to store logs here.  
+└── root/: Allows for storing all changes to the running app and will persist on container destruction  
+└── tmp/: It might be useful to keep.  
 
 ## Getting Started
 
@@ -43,3 +44,6 @@ docker-gui-gpt4all/
 
 - For better performance, configure your GPU settings appropriately.
 
+## TODO
+
+- Need to test if we need more volumes when adding mibs.  If so, where?  Run docker diff <container_id> to find out!
